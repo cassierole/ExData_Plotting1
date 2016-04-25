@@ -10,7 +10,7 @@ plot4 <- function(){
         #read data (assumes file in working directory)
         all_data<-fread("./household_power_consumption.txt", na.strings="?")
         
-        #convert Date and Time variables to Date/Time classes
+        #convert Date variables to Date class
         all_data$Date <- as.Date(all_data$Date, format="%d/%m/%Y")
         
         #select subset of dates of interest
